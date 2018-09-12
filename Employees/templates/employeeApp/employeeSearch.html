@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <form method="post">{% crsf_token %}
+    {{ form.as_p }}
+    <label search="employee_id">Enter EID: </label>
+    <input id="eeid" type="text" name="eeidField">
+    <button type="submit">Search</button>
+  </form>
+  {% endblock %}
